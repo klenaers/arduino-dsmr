@@ -256,6 +256,10 @@ namespace dsmr
     DEFINE_FIELD(energy_returned_tariff1, FixedValue, ObisId(1, 0, 2, 8, 1), FixedField, units::kWh, units::Wh);
     /* Meter Reading electricity delivered by client (Tariff 2) in 0,001 kWh */
     DEFINE_FIELD(energy_returned_tariff2, FixedValue, ObisId(1, 0, 2, 8, 2), FixedField, units::kWh, units::Wh);
+    
+    /* Peak power of the current month in 0,001 kWh */
+    DEFINE_FIELD(energy_peak_power_current_month, TimestampedFixedValue, ObisId(1, 0, 1, 6, 0), TimestampedFixedField, units::kWh, units::Wh);
+    
 
     /*
  * Extra fields used for Luxembourg
