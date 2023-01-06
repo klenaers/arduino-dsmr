@@ -259,6 +259,9 @@ namespace dsmr
     
     /* Peak power of the current month in 0,001 kW */
     DEFINE_FIELD(energy_peak_power_current_month, TimestampedFixedValue, ObisId(1, 0, 1, 6, 0), TimestampedFixedField, units::kW, units::W);
+    /* Peak power of the current month in 0,001 kW */
+    DEFINE_FIELD(energy_current_average_demand, FixedValue, ObisId(1, 0, 1, 4, 0), FixedField, units::kW, units::W);
+
     
 
     /*
