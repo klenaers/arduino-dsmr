@@ -82,6 +82,9 @@ constexpr char energy_delivered_tariff2::name[];
 constexpr ObisId energy_peak_power_current_month::id;
 constexpr char energy_peak_power_current_month::name[];
 
+constexpr ObisId energy_current_average_demand::id;
+constexpr char energy_current_average_demand::name[];
+
 /* extra for Lux */
 constexpr ObisId energy_returned_lux::id;
 constexpr char energy_returned_lux::name[];
