@@ -79,11 +79,16 @@ constexpr char energy_delivered_tariff1::name[];
 constexpr ObisId energy_delivered_tariff2::id;
 constexpr char energy_delivered_tariff2::name[];
 
+/* extra for Belgium */
 constexpr ObisId energy_peak_power_current_month::id;
 constexpr char energy_peak_power_current_month::name[];
 
 constexpr ObisId energy_current_average_demand::id;
 constexpr char energy_current_average_demand::name[];
+
+constexpr ObisId energy_import_last_13_mmonths::id;
+constexpr char energy_import_last_13_mmonths::name[];
+
 
 /* extra for Lux */
 constexpr ObisId energy_returned_lux::id;

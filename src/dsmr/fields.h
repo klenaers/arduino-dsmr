@@ -257,12 +257,15 @@ namespace dsmr
     /* Meter Reading electricity delivered by client (Tariff 2) in 0,001 kWh */
     DEFINE_FIELD(energy_returned_tariff2, FixedValue, ObisId(1, 0, 2, 8, 2), FixedField, units::kWh, units::Wh);
     
+    /*
+    * Extra fields used for Belgium
+    */
     /* Peak power of the current month in 0,001 kW */
     DEFINE_FIELD(energy_peak_power_current_month, TimestampedFixedValue, ObisId(1, 0, 1, 6, 0), TimestampedFixedField, units::kW, units::W);
     /* Peak power of the current month in 0,001 kW */
     DEFINE_FIELD(energy_current_average_demand, FixedValue, ObisId(1, 0, 1, 4, 0), FixedField, units::kW, units::W);
-
-    
+    /* Maximum demand – Active energy import of the last 13 months*/
+    DEFINE_FIELD(energy_import_last_13_mmonths, String, ObisId(0, 0, 98, 1, 0), StringField, 0, 255);
 
     /*
  * Extra fields used for Luxembourg
