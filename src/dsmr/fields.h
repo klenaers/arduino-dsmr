@@ -265,7 +265,7 @@ namespace dsmr
     /* Peak power of the current month in 0,001 kW */
     DEFINE_FIELD(energy_current_average_demand, FixedValue, ObisId(1, 0, 1, 4, 0), FixedField, units::kW, units::W);
     /* Maximum demand – Active energy import of the last 13 months*/
-    DEFINE_FIELD(energy_import_last_13_mmonths, String, ObisId(0, 0, 98, 1, 0), StringField, 0, 255);
+    DEFINE_FIELD(energy_max_demand_import_last_13_mmonths, String, ObisId(0, 0, 98, 1, 0), StringField, 0, 255);
 
     /*
  * Extra fields used for Luxembourg
