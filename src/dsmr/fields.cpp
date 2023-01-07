@@ -86,8 +86,8 @@ constexpr char energy_peak_power_current_month::name[];
 constexpr ObisId energy_current_average_demand::id;
 constexpr char energy_current_average_demand::name[];
 
-constexpr ObisId energy_max_demand_import_last_13_mmonths::id;
-constexpr char energy_max_demand_import_last_13_mmonths::name[];
+constexpr ObisId energy_max_demand_import_last_13_months::id;
+constexpr char energy_max_demand_import_last_13_months::name[];
 
 
 /* extra for Lux */
