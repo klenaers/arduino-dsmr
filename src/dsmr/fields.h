@@ -236,7 +236,7 @@ namespace dsmr
 
     /* Version information for P1 output */
     DEFINE_FIELD(p1_version, String, ObisId(1, 3, 0, 2, 8), StringField, 2, 2);
-    DEFINE_FIELD(p1_version_be, String, ObisId(0, 0, 96, 1, 4), StringField, 2, 5);
+    DEFINE_FIELD(p1_version_be, String, ObisId(0, 0, 96, 1, 4), StringField, 2, 96);
 
     /* Date-time stamp of the P1 message */
     DEFINE_FIELD(timestamp, String, ObisId(0, 0, 1, 0, 0), TimestampField);
@@ -440,6 +440,12 @@ namespace dsmr
  * E meter) (Note: 4.x spec has "hourly meter reading") */
     DEFINE_FIELD(sub_delivered, TimestampedFixedValue, ObisId(0, SUB_MBUS_ID, 24, 2, 1), TimestampedFixedField,
                  units::m3, units::dm3);
+
+    /* Extra fields used for Belgian capacity rate/peak consumption (cappaciteitstarief) */
+    /*Current quart-hourly energy consumption*/
+    DEFINE_FIELD(active_energy_import_current_average_demand, FixedValue, ObisId(1, 0, 1, 4, 0), FixedField, units::kW, units::W);
+    /*Maximum energy consumption from the current month*/
+    DEFINE_FIELD(active_energy_import_maximum_demand_running_month, TimestampedFixedValue, ObisId(1, 0, 1, 6, 0), TimestampedFixedField, units::kW, units::W);
 
   } // namespace fields
 
