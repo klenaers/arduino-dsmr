@@ -456,7 +456,7 @@ namespace dsmr
       // this field, that's ok. But if it did move, but not all the way
       // to the end, that's an error.
       if (datares.next != idres.next && datares.next != end)
-        return res.fail("Trailing characters on data line", "id:" & idres.next & " end: " & end & " - " & datares.next);
+        return res.fail("Trailing characters on data line id:" & idres.next & " end: " & end,  datares.next);
       else if (datares.next == idres.next && unknown_error)
         return res.fail("Unknown field", line);
 
