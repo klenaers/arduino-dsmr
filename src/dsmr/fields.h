@@ -256,6 +256,12 @@ namespace dsmr
     DEFINE_FIELD(energy_returned_tariff1, FixedValue, ObisId(1, 0, 2, 8, 1), FixedField, units::kWh, units::Wh);
     /* Meter Reading electricity delivered by client (Tariff 2) in 0,001 kWh */
     DEFINE_FIELD(energy_returned_tariff2, FixedValue, ObisId(1, 0, 2, 8, 2), FixedField, units::kWh, units::Wh);
+  
+     /*
+    * Extra fields used for Belgium
+    */
+    /* Maximum demand – Active energy import of the last 13 months*/
+    DEFINE_FIELD(active_energy_import_maximum_demand_last_13_months, String, ObisId(0, 0, 98, 1, 0), RawField);
 
     /*
  * Extra fields used for Luxembourg
@@ -437,7 +443,7 @@ namespace dsmr
     /*Maximum energy consumption from the current month*/
     DEFINE_FIELD(active_energy_import_maximum_demand_running_month, TimestampedFixedValue, ObisId(1, 0, 1, 6, 0), TimestampedFixedField, units::kW, units::W);
     /*Maximum energy consumption from the last 13 months*/
-    DEFINE_FIELD(active_energy_import_maximum_demand_last_13_months, String, ObisId(0, 0, 98, 1, 0), RawField);
+    //DEFINE_FIELD(active_energy_import_maximum_demand_last_13_months, String, ObisId(0, 0, 98, 1, 0), RawField);
 
   } // namespace fields
 
