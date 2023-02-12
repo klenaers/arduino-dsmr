@@ -261,7 +261,7 @@ namespace dsmr
     * Extra fields used for Belgium
     */
     /* Maximum demand – Active energy import of the last 13 months*/
-    DEFINE_FIELD(active_energy_import_maximum_demand_last_13_months, String, ObisId(0, 0, 98, 1, 0), RawField);
+    DEFINE_FIELD(active_energy_import_maximum_demand_last_13_months, String, ObisId(0, 0, 98, 1, 0), StringField, 4, 255);
 
     /*
  * Extra fields used for Luxembourg
